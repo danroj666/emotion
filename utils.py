@@ -6,8 +6,8 @@ from tensorflow.keras.models import load_model
 
 try:
     # Cargar los modelos preentrenados
-    keypoints_model = load_model('models/weights_keypoint.hdf5')
-    emotion_model = load_model('models/weights_emotions.hdf5')
+    keypoints_model = load_model('models/model_facialexpression.hdf5')
+    emotion_model = load_model('models/model_keyfacial.hdf5')
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 except Exception as e:
     print(f"Error al cargar los modelos: {str(e)}")
